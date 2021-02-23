@@ -1,4 +1,14 @@
-<hello name="{{ name }}"></hello>
 <p>
-  Start editing to see some magic happen :)
+  Baris : <input [(ngModel)]="row" type="text"> 
+</p>
+<p>
+  Kolom : <input [(ngModel)]="col" type="text">
+</p>
+<button (click)="changeTurn()">Submit</button>
+<p>
+  <span *ngFor="let items of show"> 
+    <span *ngFor="let item of items"> 
+      {{item}}
+    </span> <br/>
+  </span>
 </p>
